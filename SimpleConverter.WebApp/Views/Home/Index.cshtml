@@ -1,0 +1,58 @@
+﻿@model SimpleConverter.Service.Model.ResponseModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="col-12">
+            <div class="text-center">
+                <h1 class="display-5">Request</h1>
+            </div>
+        </div>
+        <div class="col-12">
+            <form asp-controller="Home" asp-action="Index" method="post">
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 400px" name="json">@ViewBag.Request</textarea>
+                    <label for="floatingTextarea2">Json Input</label>
+                </div>
+
+                <button type="submit" class="btn btn-primary mt-2" name="btnType" value="HTML">Convert Html</button>
+                <button type="submit" class="btn btn-primary mt-2" name="btnType" value="XML">Convert Xml</button>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="col-12">
+            <div class="text-center">
+                <h1 class="display-5">Response</h1>
+            </div>
+        </div>
+        <div class="col-12">
+
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 400px" name="json">@Model.Response</textarea>
+              
+                </div>
+        </div>
+    </div>
+</div>
+
+
+@*<div class="row">
+    
+        <div class="col-12 mt-3">
+            <div class="text-center">
+                <h1 class="display-5">Response</h1>
+            </div>
+        </div>
+    <div class="col-12">
+        <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 300px" name="json">@ViewBag.Response</textarea>
+        </div>
+    </div>
+</div>*@
+
